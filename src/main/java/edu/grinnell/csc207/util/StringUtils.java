@@ -21,7 +21,40 @@ public class StringUtils {
    */
   public static boolean checkMatching(String str) {
     Stack<Character> parens = new LinkedStack<Character>();
-    return false;       // STUB
+
+    for (int i = 0; i < str.length(); i++){
+      if (str.charAt(i) == ('(') || str.charAt(i) == ('[') ){
+        try {
+          parens.put(str.charAt(i));
+        } catch (Exception e) {
+          e.printStackTrace();
+        }
+      } else if (str.charAt(i) == (')') ){
+          try {
+            if (parens.get() == ('[')){
+              return false;
+            }
+          } catch (Exception e) {
+            e.printStackTrace();
+          }
+      } else if (str.charAt(i) == (']') ){
+        try {
+          if (parens.get() == ('(')){
+            return false;
+          }
+        } catch (Exception e) {
+          e.printStackTrace();
+        }
+    }
+
+    }
+    if (parens.isEmpty()){
+      return true;
+    }
+    return false;      
   } // checkMatching
+
+  
+
 } // class StringUtils    
 
