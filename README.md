@@ -5,6 +5,7 @@ Authors:
 * Samuel A. Rebelsky
 * Sheilla Muligande
 * Sarah Deschamps
+* Part 2 authors: Sheilla Muligande And Natalie Nardone
 
 The latest version of the CSC-207 lab on linear structures, now with Maven.
 
